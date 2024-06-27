@@ -10,5 +10,5 @@ The included model architectures in this repository are:
 
 3. **Mean Parameter Model**
 
-The training data and trained models are present in this [file](links.txt)
+The training data and trained models are present in this [file](Links)
 For further details, refer to the [report](report.pdf).
