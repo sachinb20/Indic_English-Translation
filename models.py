@@ -5,8 +5,6 @@ from torch import nn, Tensor
 from torch.nn import Transformer
 
 
-
-# helper Module that adds positional encoding to the token embedding to introduce a notion of word order.
 class PositionalEncoding(nn.Module):
     def __init__(self,
                  emb_size: int,
@@ -26,7 +24,7 @@ class PositionalEncoding(nn.Module):
     def forward(self, token_embedding: Tensor):
         return self.dropout(token_embedding + self.pos_embedding[:token_embedding.size(0), :])
 
-# helper Module to convert tensor of input indices into corresponding tensor of token embeddings
+
 class TokenEmbedding(nn.Module):
     def __init__(self, vocab_size: int, emb_size):
         super(TokenEmbedding, self).__init__()
@@ -36,7 +34,7 @@ class TokenEmbedding(nn.Module):
     def forward(self, tokens: Tensor):
         return self.embedding(tokens.long()) * math.sqrt(self.emb_size)
 
-# The Network
+
 class Seq2SeqTransformer(nn.Module):
     def __init__(self,
                  num_encoder_layers: int,
