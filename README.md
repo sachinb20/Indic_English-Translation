@@ -1,4 +1,3 @@
-# Indic_English-Translation
 # Training Files for Indic to English Translation
 
 The included model architectures in this repository are:
@@ -11,4 +10,5 @@ The included model architectures in this repository are:
 
 3. **Mean Parameter Model**
 
-For further details, refer to the [report.pdf](report.pdf).
+The training data and trained models are present in this [file](links.txt)
+For further details, refer to the [report](report.pdf).
